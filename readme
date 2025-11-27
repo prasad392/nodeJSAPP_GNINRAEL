@@ -1,0 +1,52 @@
+    //first we need to create the folder and then run the cmd for node modules installation
+
+    => npm init
+    to create the node app and then the server.js
+
+    console.log('Helllo world')
+
+    to run the node as,
+
+    => node server.js
+
+
+    --Global objects --
+
+    __dirname :- returns the directory name of the current module.
+        // console.log(__dirname)
+    __filename :- returns the file name of the current module.
+        // console.log(__filename)
+    process: provides the information about the curr node.js process
+        // console.log(process.env) --> environment variable
+        // console.log(process.argv) --> cmd line arguments
+    process.env: contains the user environment.
+        // console.log(process.env.NODE_ENV)
+
+// MODULES
+
+    --> ES6 modules
+    --> Common JS modules
+
+    // ES6 modules
+    when to export the module we use the 'export' for import we use 'import'
+
+    // common JS modules
+    when to export the module use 'module.exports' for import we use the 'require'
+
+    // add.js
+        
+    function add(a,b){
+        console.log('Hello world!')
+        console.log(a+b)
+    }
+
+    module.exports={
+        add
+    }
+
+    // server.js
+        
+    const myfun = require('./add')
+    myfun.add(10,20)
+
+    // process.exit(1)
